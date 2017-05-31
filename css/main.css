@@ -1,3 +1,12 @@
+/*
+Colors:
+red rgba(247,57,85,1);
+blue rgba(42,150,189,1);
+green rgba(69,177,156,1);
+yellow rgba(239,201,76,1);
+background grey rgba(50,78,92,1);
+*/
+
 .wrapper {
   height: 100vh;
   display: flex;
@@ -12,8 +21,18 @@
   align-items: center;
 }
 
+.backgroundCircle {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(50,78,92,1);
+  border-radius: 100%;
+  height: 430px;
+  width: 430px;
+}
+
 .gamePart {
-  border: 1px solid black;
   height: 200px;
   width: 200px;
 }
@@ -38,35 +57,94 @@
 #upLeft {
   border-top-left-radius: 100%;
   cursor: pointer;
-
+  background: rgba(69,177,156,1);
+  margin-left: 10px;
+  margin: 10px 5px 5px 10px
 }
 
 #upRight {
   border-top-right-radius: 100%;
   cursor: pointer;
-  
-}
-
-#center {
-  position: absolute;
-  background: red;
-  border-radius: 100%;
-  width: 220px;
-  height: 220px;
+  background: rgba(247,57,85,1);
+   margin: 10px 10px 5px 5px;
 }
 
 #downLeft {
   border-bottom-left-radius: 100%;
   cursor: pointer;
+  background: rgba(239,201,76,1);
+  margin: 5px 5px 10px 10px;
+  
 }
 
 #downRight {
   border-bottom-right-radius: 100%;
   cursor: pointer;
+  background: rgba(42,150,189,1);
+  margin: 5px 10px 10px 5px;
 }
+
+/* center and menu*/
+#center {
+  position: absolute;
+  background: rgba(245,245,245,1);
+  border-radius: 100%;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  border: 10px solid rgba(50,78,92,1);
+}
+
+#counterScreenDiv {
+  height: 40px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#counterScreen {
+  background-color: rgba(50,78,92,1);
+  width: 80px;
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu p {
+  width: 100%;
+  text-align: center;
+}
+
+.menuBtn {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  border: none;
+}
+
+#start {
+  background: rgba(69,177,156,1);
+}
+
+#strict {
+  background: rgba(239,201,76,1);
+}
+
+#restart {
+  background: rgba(247,57,85,1);
+}
+
 
 /* active class */
 
 .active {
-  background: rgba(0,0,0,0.5);
+  filter: brightness(150%);
 }
