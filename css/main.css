@@ -25,6 +25,7 @@ background rgb(243,236,192);
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .backgroundCircle {
