@@ -4,14 +4,20 @@ red rgba(247,57,85,1);
 blue rgba(42,150,189,1);
 green rgba(69,177,156,1);
 yellow rgba(239,201,76,1);
-background grey rgba(50,78,92,1);
+border grey rgba(50,78,92,1);
+background rgb(243,236,192);
 */
+
+* {
+  outline: none;
+}
 
 .wrapper {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgb(243,236,192);
 }
 
 .game{
@@ -59,7 +65,7 @@ background grey rgba(50,78,92,1);
   cursor: pointer;
   background: rgba(69,177,156,1);
   margin-left: 10px;
-  margin: 10px 5px 5px 10px
+  margin: 10px 5px 5px 10px;
 }
 
 #upRight {
@@ -98,6 +104,48 @@ background grey rgba(50,78,92,1);
   border: 10px solid rgba(50,78,92,1);
 }
 
+#strictLed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+#led {
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background: rgba(50,78,92,1);
+}
+
+#strictLed p{
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+#title {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  top: -40px;
+}
+
+sup {
+  font-size: 15px;
+  position:relative;
+  top: -15px;
+}
+
+#title h3{
+  font-size: 40px;
+  text-align: center;
+  color: rgba(50,78,92,1);
+}
+
 #counterScreenDiv {
   height: 40px;
   width: 100%;
@@ -108,8 +156,19 @@ background grey rgba(50,78,92,1);
 
 #counterScreen {
   background-color: rgba(50,78,92,1);
-  width: 80px;
-  height: 40px;
+  width: 50px;
+  height: 30px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#counter {
+  text-align: center;
+  margin: 0px;
+  color: rgba(247,57,85,0.3);
+  font-size: 30px;
+  font-family: 'VT323', monospace;
 }
 
 .menu {
@@ -128,10 +187,16 @@ background grey rgba(50,78,92,1);
   width: 25px;
   border-radius: 100%;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(50,78,92,0.8);
+  margin: 0px 4px 10px 4px;
 }
 
 #start {
   background: rgba(69,177,156,1);
+  font-size: 18px
 }
 
 #strict {
@@ -146,5 +211,22 @@ background grey rgba(50,78,92,1);
 /* active class */
 
 .active {
-  filter: brightness(150%);
+  filter: brightness(200%);
+}
+
+.clicked {
+  transform: scale(0.95);
+  transition: 0.2s;
+}
+
+@media (max-width: 481px) {
+  .game {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 360px) {
+  .game {
+    transform: scale(0.6);
+  }
 }

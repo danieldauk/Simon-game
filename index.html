@@ -10,8 +10,9 @@
       <meta name="description" content="Simon Game">
       <meta name="keywords" content="Simon Game">
       <meta name="author" content="Daniel Dauksevic">
-      
+      <script src="https://use.fontawesome.com/97c7d705f5.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
       <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -28,21 +29,28 @@
               <div class="gamePart" id="downRight"></div>
             </div>
             <div id="center">
-              <div id="title"></div>
+              <div id="strictLed">
+                <div id="led"></div>
+                <p>strict mode</p>
+              </div>
+              <div id="title">
+                <h3> Simon<sup>&reg;</sup></h3>
+              </div>
               <div id="counterScreenDiv">
-                <div id="counterScreen"></div>
+                <div id="counterScreen">
+                  <p id="counter"></p>
+                </div>
               </div>
               <div class="menu">
-                <button class="menuBtn" id="start"></button>
-                <p>start</p>
+                <button class="menuBtn" id="start">
+                <i class="fa fa-power-off" aria-hidden="true"></i></button>
               </div>
               <div class="menu">
-                <button class="menuBtn" id="strict"></button>
-                <p>strict</p>
+                <button class="menuBtn" id="strict">
+               <i class="fa fa-exclamation" aria-hidden="true"></i></button>
               </div>
               <div class="menu">
-                <button class="menuBtn" id="restart"></button>
-                <p>restart</p>
+                <button class="menuBtn" id="restart"><i class="fa fa-undo" aria-hidden="true"></i></button>
               </div>
             </div>
           </div>
