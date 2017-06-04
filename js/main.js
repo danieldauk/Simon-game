@@ -58,7 +58,7 @@ $(function() {
     if(count +1 == movesCounter) {
       resetTimeout3 = setTimeout(function(){
       playerMove();
-    }, delay+patternSpeed+200);
+    }, delay+patternSpeed-150);
     }
   }
 
